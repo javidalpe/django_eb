@@ -7,4 +7,8 @@ def home(request):
     return HttpResponse("Javi plantate un pino!!")
 
 def products_show(request, product):
-    return HttpResponse("Product " + product)
+    template = get_template('products/show.html')
+    context = RequestContext(request, {
+        'product': product,
+    })
+    return HttpResponse(template.render(context))
