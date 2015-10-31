@@ -6,7 +6,7 @@ from django.template import Context
 
 from django.http import HttpResponse
 def home(request):
-    return HttpResponse("eb deploy")
+    return HttpResponse(print(range(10))
 
 def products_show(request, product):
     template = get_template('products/show.html')
