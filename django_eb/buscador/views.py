@@ -19,9 +19,6 @@ def products_show(request, product):
     context = Context({'product': product})
     return HttpResponse(template.render(context))
 
-def products_bridge(request, product):
-    return HttpResponse('')
-
 
 # Categories
 def category_index(request):

@@ -21,7 +21,6 @@ urlpatterns = [
     #Landings, Javi's land
     url(r'^$', 'buscador.views.home'),
     url(r'^productos/(?P<product>[0-9]+)/$', 'buscador.views.products_show'),
-    url(r'^productos/(?P<product>[0-9]+)/bridge$', 'buscador.views.products_bridge'),
 
     url(r'^categorias/$', 'buscador.views.category_index'),
     url(r'^categorias/(?P<category>[a-z]+)/$', 'buscador.views.category_show'),
