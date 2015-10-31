@@ -7,4 +7,4 @@ def home(request):
     return HttpResponse("Hello World!")
 
 def products_show(request, product):
-    return HttpResponse(" " + product)
+    return HttpResponse("Product " + product)
