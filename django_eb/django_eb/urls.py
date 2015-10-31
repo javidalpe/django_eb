@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^$', 'buscador.views.home'),
+    url(r'^products/(?P<product>[0-9]+)/$', 'buscador.views.products_show'),
     url(r'^admin/', include(admin.site.urls)),
 ]
