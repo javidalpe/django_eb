@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.template.loader import get_template
+from django.template import Context
 
 # Create your views here.
 
@@ -8,7 +10,5 @@ def home(request):
 
 def products_show(request, product):
     template = get_template('products/show.html')
-    context = RequestContext(request, {
-        'product': product,
-    })
+    context = Context({'product': product})
     return HttpResponse(template.render(context))
