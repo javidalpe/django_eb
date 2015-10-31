@@ -6,7 +6,9 @@ from django.template import Context
 
 from django.http import HttpResponse
 def home(request):
-    return HttpResponse("Hola Javi")
+    template = get_template('home.html')
+    context = Context({})
+    return HttpResponse(template.render(context))
 
 def products_show(request, product):
     template = get_template('products/show.html')
