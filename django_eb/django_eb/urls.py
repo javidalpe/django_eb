@@ -22,7 +22,7 @@ urlpatterns = [
 
     #Spiders
     url(r'^spiders/', 'buscador.views.spiders_index'),
-    url(r'^spiders/(?P<spider>[0-9]+)/$', 'buscador.views.spiders_show'),
+    url(r'^spiders/(?P<spider>[0-9]+)/$', 'buscador.views.spiders_scrape'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
