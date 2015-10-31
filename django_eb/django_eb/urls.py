@@ -17,10 +17,19 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+
+    #Landings, Javi's land
     url(r'^$', 'buscador.views.home'),
     url(r'^products/(?P<product>[0-9]+)/$', 'buscador.views.products_show'),
+    url(r'^products/(?P<product>[0-9]+)/bridge$', 'buscador.views.products_bridge'),
 
-    #Spiders
+    url(r'^category/$', 'buscador.views.category_index'),
+    url(r'^category/(?P<category>[a-z]+)/$', 'buscador.views.category_show'),
+
+    url(r'^editor/$', 'buscador.views.editor_index'),
+
+
+    #Spiders, Alvaro's land
     url(r'^spiders/', 'buscador.views.spiders_index'),
     url(r'^spiders/(?P<spider>[0-9]+)/$', 'buscador.views.spiders_scrape'),
 
