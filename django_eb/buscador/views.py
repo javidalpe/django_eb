@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 def home(request):
-    return HttpResponse("Javi plantate un pino!!")
+    return HttpResponse("eb deploy")
 
 def products_show(request, product):
     return HttpResponse("Product " + product)
