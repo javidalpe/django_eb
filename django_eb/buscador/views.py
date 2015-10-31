@@ -24,10 +24,18 @@ def products_bridge(request, product):
 
 
 # Categories
-def category_index(request, category):
+def category_index(request):
     return HttpResponse('')
 
 def category_show(request, category):
+    return HttpResponse('')
+
+
+# Brans
+def brands_index(request):
+    return HttpResponse('')
+
+def brands_show(request, brand):
     return HttpResponse('')
 
 

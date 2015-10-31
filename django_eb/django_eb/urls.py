@@ -20,11 +20,14 @@ urlpatterns = [
 
     #Landings, Javi's land
     url(r'^$', 'buscador.views.home'),
-    url(r'^products/(?P<product>[0-9]+)/$', 'buscador.views.products_show'),
-    url(r'^products/(?P<product>[0-9]+)/bridge$', 'buscador.views.products_bridge'),
+    url(r'^productos/(?P<product>[0-9]+)/$', 'buscador.views.products_show'),
+    url(r'^productos/(?P<product>[0-9]+)/bridge$', 'buscador.views.products_bridge'),
 
-    url(r'^category/$', 'buscador.views.category_index'),
-    url(r'^category/(?P<category>[a-z]+)/$', 'buscador.views.category_show'),
+    url(r'^categorias/$', 'buscador.views.category_index'),
+    url(r'^categorias/(?P<category>[a-z]+)/$', 'buscador.views.category_show'),
+
+    url(r'^marcas/$', 'buscador.views.brands_index'),
+    url(r'^marcas/(?P<brand>[a-z]+)/$', 'buscador.views.brands_show'),
 
     url(r'^editor/$', 'buscador.views.editor_index'),
 
